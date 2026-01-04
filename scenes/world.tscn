@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://14tqrp4n2174"]
+[gd_scene load_steps=9 format=3 uid="uid://14tqrp4n2174"]
 
 [ext_resource type="Script" uid="uid://cr0jadobarib6" path="res://scripts/player.gd" id="1_nnsk1"]
+[ext_resource type="Texture2D" uid="uid://dpg7klp7jfsgc" path="res://assets/textures/ground.jpg" id="1_rwgxs"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nnsk1"]
-albedo_color = Color(0, 0.76862746, 0.33333334, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wyf3"]
+albedo_texture = ExtResource("1_rwgxs")
+uv1_triplanar = true
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rwgxs"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -30,8 +32,8 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 [node name="CSGBox3D" type="CSGBox3D" parent="map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4995, 0)
 use_collision = true
-size = Vector3(27.423828, 0.001, 45.00757)
-material = SubResource("StandardMaterial3D_nnsk1")
+size = Vector3(1000, 0.002, 1000)
+material = SubResource("StandardMaterial3D_4wyf3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="map"]
 environment = SubResource("Environment_k0juu")
