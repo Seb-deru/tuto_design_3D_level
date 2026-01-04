@@ -1,9 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://14tqrp4n2174"]
+[gd_scene load_steps=14 format=3 uid="uid://14tqrp4n2174"]
 
 [ext_resource type="Script" uid="uid://cr0jadobarib6" path="res://scripts/player.gd" id="1_nnsk1"]
-[ext_resource type="Texture2D" uid="uid://dpg7klp7jfsgc" path="res://assets/Textures/ground.jpg" id="1_rwgxs"]
+[ext_resource type="Texture2D" uid="uid://dpg7klp7jfsgc" path="res://assets/textures/ground.jpg" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://b3a2b0nwf6nml" path="res://scenes/crypt.tscn" id="3_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://cfvuho2bjdse4" path="res://scenes/road.tscn" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://cbn1jb5wqkuxr" path="res://scenes/stone_wall_damaged.tscn" id="5_71j4m"]
+[ext_resource type="PackedScene" uid="uid://dfrnruq0beoh4" path="res://scenes/stone_wall.tscn" id="6_qfnet"]
+[ext_resource type="PackedScene" uid="uid://dt1m1slhn1g6c" path="res://scenes/stone_wall_column.tscn" id="7_i7141"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wyf3"]
 albedo_texture = ExtResource("1_rwgxs")
@@ -476,6 +479,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.700005, 0, -42.4)
 [node name="road56" parent="map/Roads" instance=ExtResource("4_k0juu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.700005, 0, -45)
 
+[node name="stone-wall-column" parent="map" instance=ExtResource("7_i7141")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -13.399746, -0.4984996, -1.0008514)
+
 [node name="player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4995, 0)
 script = ExtResource("1_nnsk1")
@@ -495,3 +501,63 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6294287, 0)
 
 [node name="crypt" parent="." instance=ExtResource("3_4wyf3")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0.23189068, -0.49849996, -16.0294)
+
+[node name="stone-wall-damaged" parent="." instance=ExtResource("5_71j4m")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 5.8896084, -0.49850008, -0.9237633)
+
+[node name="stone-wall-damaged2" parent="." instance=ExtResource("5_71j4m")]
+transform = Transform3D(-6, 0, 5.2453663e-07, 0, 6, 0, -5.2453663e-07, 0, -6, -5.1103916, -0.49850008, -5.7476125)
+
+[node name="stone-wall2" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 11.897256, -0.5, -0.92567873)
+
+[node name="stone-wall14" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -11.018902, -0.5, -0.9708514)
+
+[node name="stone-wall-column" parent="." instance=ExtResource("7_i7141")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 14.052946, -0.4984996, -0.9206743)
+
+[node name="stone-wall-damaged3" parent="." instance=ExtResource("5_71j4m")]
+transform = Transform3D(-6, 0, -5.2453663e-07, 0, 6, 0, 5.2453663e-07, 0, -6, 17.27621, -0.49850056, -5.727455)
+
+[node name="stone-wall3" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(-2.6226832e-07, 0, 6, 0, 6, 0, -6, 0, -2.6226832e-07, 16.470459, -0.49849865, -6.8588624)
+
+[node name="stone-wall4" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(-2.6226832e-07, 0, 6, 0, 6, 0, -6, 0, -2.6226832e-07, 16.470459, -0.49849865, -12.858862)
+
+[node name="stone-wall5" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(-2.6226832e-07, 0, 6, 0, 6, 0, -6, 0, -2.6226832e-07, 16.470459, -0.49849865, -18.858862)
+
+[node name="stone-wall6" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(-2.6226832e-07, 0, 6, 0, 6, 0, -6, 0, -2.6226832e-07, 16.470459, -0.49849865, -24.858862)
+
+[node name="stone-wall-column2" parent="." instance=ExtResource("7_i7141")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 14.061107, -0.49850056, -24.784286)
+
+[node name="stone-wall7" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 8.114142, -0.4984996, -24.78903)
+
+[node name="stone-wall8" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 2.1141424, -0.4984996, -24.78903)
+
+[node name="stone-wall9" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -3.8858576, -0.4984996, -24.78903)
+
+[node name="stone-wall10" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -9.885858, -0.4984996, -24.78903)
+
+[node name="stone-wall-column3" parent="." instance=ExtResource("7_i7141")]
+transform = Transform3D(-2.6226832e-07, 0, 6, 0, 6, 0, -6, 0, -2.6226832e-07, -10.969283, -0.4984996, -27.313911)
+
+[node name="stone-wall11" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(-2.6226832e-07, 0, -6, 0, 6, 0, 6, 0, -2.6226832e-07, -15.77203, -0.4984996, -21.349442)
+
+[node name="stone-wall12" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(-2.6226832e-07, 0, -6, 0, 6, 0, 6, 0, -2.6226832e-07, -15.77203, -0.4984996, -15.349442)
+
+[node name="stone-wall13" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(-2.6226832e-07, 0, -6, 0, 6, 0, 6, 0, -2.6226832e-07, -15.77203, -0.4984996, -9.349442)
+
+[node name="stone-wall15" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(-2.6226832e-07, 0, -6, 0, 6, 0, 6, 0, -2.6226832e-07, -15.77203, -0.4984996, -7.1494412)
