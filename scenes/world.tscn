@@ -1,6 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://14tqrp4n2174"]
+[gd_scene load_steps=8 format=3 uid="uid://14tqrp4n2174"]
 
 [ext_resource type="Script" uid="uid://cr0jadobarib6" path="res://scripts/player.gd" id="1_nnsk1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nnsk1"]
+albedo_color = Color(0, 0.76862746, 0.33333334, 1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rwgxs"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,18 +18,6 @@ sky = SubResource("Sky_4wyf3")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nnsk1"]
-albedo_color = Color(0, 0.76862746, 0.33333334, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwgxs"]
-albedo_color = Color(0.78039217, 0.011764706, 0.09411765, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wyf3"]
-albedo_color = Color(0.56112355, 0.27888182, 0.8932797, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0juu"]
-albedo_color = Color(0.61960787, 0.627451, 0, 1)
-
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_e5uuo"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nnsk1"]
@@ -34,33 +25,20 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 
 [node name="world" type="Node3D"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
+[node name="map" type="Node3D" parent="."]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_k0juu")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="CSGBox3D" type="CSGBox3D" parent="map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4995, 0)
 use_collision = true
 size = Vector3(27.423828, 0.001, 45.00757)
 material = SubResource("StandardMaterial3D_nnsk1")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5130577, 0.9995, 0)
-size = Vector3(1, 2, 1)
-material = SubResource("StandardMaterial3D_rwgxs")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="map"]
+environment = SubResource("Environment_k0juu")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2630577, 0.44949996, -3.75)
-size = Vector3(2, 1, 2)
-material = SubResource("StandardMaterial3D_4wyf3")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5130577, 0.99950004, 3.5)
-size = Vector3(4, 2, 1)
-material = SubResource("StandardMaterial3D_k0juu")
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="map"]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
 
 [node name="player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4995, 0)
