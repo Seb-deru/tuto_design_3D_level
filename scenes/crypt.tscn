@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://b3a2b0nwf6nml"]
 
-[ext_resource type="Texture2D" uid="uid://bjbwwdoi6s705" path="res://assets/textures/colormap.png" id="1_2knc2"]
+[ext_resource type="Texture2D" uid="uid://bjbwwdoi6s705" path="res://assets/Textures/colormap.png" id="1_2knc2"]
 [ext_resource type="PackedScene" uid="uid://bymv8jw7t5a43" path="res://assets/models/crypt/crypt-large-door.glb" id="2_r8hbe"]
 [ext_resource type="PackedScene" uid="uid://7524dhy5vlky" path="res://assets/models/crypt/crypt-large-roof.glb" id="3_hxka1"]
 
